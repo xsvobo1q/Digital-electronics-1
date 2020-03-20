@@ -1,0 +1,4 @@
+vhdl work "clock_enable.vhd"
+vhdl work "BCD.vhd"
+vhdl work "stopwatch.vhd"
+vhdl work "stopwatch_tb00.vhd"
