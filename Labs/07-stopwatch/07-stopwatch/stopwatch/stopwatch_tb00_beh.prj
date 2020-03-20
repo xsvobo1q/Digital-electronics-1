@@ -1,4 +1,6 @@
 vhdl work "clock_enable.vhd"
 vhdl work "BCD.vhd"
 vhdl work "stopwatch.vhd"
+vhdl work "hex_to_7seg.vhd"
+vhdl work "stopwatch_driver.vhd"
 vhdl work "stopwatch_tb00.vhd"

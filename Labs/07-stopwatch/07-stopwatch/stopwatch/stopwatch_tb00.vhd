@@ -2,15 +2,15 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   18:15:31 03/19/2020
+-- Create Date:   14:01:07 03/20/2020
 -- Design Name:   
--- Module Name:   C:/Users/Marek/Desktop/Labs07-stopwatch/stopwatch/stopwatch_tb00.vhd
+-- Module Name:   C:/Users/Marek/Desktop/DE Moje/Digital-electronics-1-master/Labs/07-stopwatch/07-stopwatch/stopwatch/stopwatch_tb00.vhd
 -- Project Name:  stopwatch
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: stopwatch
+-- VHDL Test Bench Created by ISE for module: stopwatch_driver
 -- 
 -- Dependencies:
 -- 
@@ -39,15 +39,15 @@ ARCHITECTURE behavior OF stopwatch_tb00 IS
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT stopwatch
+    COMPONENT stopwatch_driver
     PORT(
-         hth_l_o : OUT  std_logic_vector(3 downto 0);
-         hth_h_o : OUT  std_logic_vector(3 downto 0);
-         sec_l_o : OUT  std_logic_vector(3 downto 0);
-         sec_h_o : OUT  std_logic_vector(3 downto 0);
          clk_i : IN  std_logic;
          srst_n_i : IN  std_logic;
-         cnt_en_i : IN  std_logic
+         cnt_en_i : IN  std_logic;
+         dp_i : IN  std_logic_vector(3 downto 0);
+         dp_o : OUT  std_logic;
+         seg_o : OUT  std_logic_vector(6 downto 0);
+         dig_o : OUT  std_logic_vector(3 downto 0)
         );
     END COMPONENT;
     
@@ -56,12 +56,12 @@ ARCHITECTURE behavior OF stopwatch_tb00 IS
    signal clk_i : std_logic := '0';
    signal srst_n_i : std_logic := '0';
    signal cnt_en_i : std_logic := '0';
+   signal dp_i : std_logic_vector(3 downto 0) := (others => '0');
 
  	--Outputs
-   signal hth_l_o : std_logic_vector(3 downto 0);
-   signal hth_h_o : std_logic_vector(3 downto 0);
-   signal sec_l_o : std_logic_vector(3 downto 0);
-   signal sec_h_o : std_logic_vector(3 downto 0);
+   signal dp_o : std_logic;
+   signal seg_o : std_logic_vector(6 downto 0);
+   signal dig_o : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
    constant clk_i_period : time := 0.1 ms;
@@ -69,14 +69,14 @@ ARCHITECTURE behavior OF stopwatch_tb00 IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: stopwatch PORT MAP (
-          hth_l_o => hth_l_o,
-          hth_h_o => hth_h_o,
-          sec_l_o => sec_l_o,
-          sec_h_o => sec_h_o,
+   uut: stopwatch_driver PORT MAP (
           clk_i => clk_i,
           srst_n_i => srst_n_i,
-          cnt_en_i => cnt_en_i
+          cnt_en_i => cnt_en_i,
+          dp_i => dp_i,
+          dp_o => dp_o,
+          seg_o => seg_o,
+          dig_o => dig_o
         );
 
    -- Clock process definitions
@@ -93,28 +93,13 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 0.1 ms;	
+      wait for 100 ns;	
 
-		srst_n_i <= '1';
-		cnt_en_i <= '1';  --normalni citani
-      -- insert stimulus here 
-		
-		wait for 25867 ms;
-		
-		cnt_en_i <= '0';
-		
-		wait for 500 ms;
-		
+      wait for clk_i_period*10;
+
+      srst_n_i <= '1';
 		cnt_en_i <= '1';
-		
-		wait for 8000 ms;
-		
-		srst_n_i <= '0';
-		
-		wait for 20 ms;
-		
-		srst_n_i <= '1';
-
+		dp_i <= "1011";
 
       wait;
    end process;

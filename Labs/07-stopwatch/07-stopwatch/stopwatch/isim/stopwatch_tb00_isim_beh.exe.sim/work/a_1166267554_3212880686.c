@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Marek/Desktop/Digital-electronics-1-Moje/Digital-electronics-1-master/Labs/07-stopwatch/stopwatch/stopwatch.vhd";
+static const char *ng0 = "C:/Users/Marek/Desktop/DE Moje/Digital-electronics-1-master/Labs/07-stopwatch/07-stopwatch/stopwatch/stopwatch.vhd";
 extern char *IEEE_P_1242562249;
 
 unsigned char ieee_p_1242562249_sub_2110375371_1035706684(char *, char *, char *, char *, char *);
@@ -65,8 +65,8 @@ static void work_a_1166267554_3212880686_p_0(char *t0)
 LAB0:    xsi_set_current_line(72, ng0);
     t1 = (t0 + 2152U);
     t2 = *((char **)t1);
-    t1 = (t0 + 13244U);
-    t3 = (t0 + 13344);
+    t1 = (t0 + 13052U);
+    t3 = (t0 + 13152);
     t6 = (t5 + 0U);
     t7 = (t6 + 0U);
     *((int *)t7) = 0;
@@ -103,8 +103,8 @@ LAB4:    xsi_set_current_line(76, ng0);
 LAB3:    xsi_set_current_line(80, ng0);
     t1 = (t0 + 2152U);
     t2 = *((char **)t1);
-    t1 = (t0 + 13244U);
-    t3 = (t0 + 13348);
+    t1 = (t0 + 13052U);
+    t3 = (t0 + 13156);
     t6 = (t5 + 0U);
     t7 = (t6 + 0U);
     *((int *)t7) = 0;
@@ -146,8 +146,8 @@ LAB7:    xsi_set_current_line(84, ng0);
 LAB6:    xsi_set_current_line(88, ng0);
     t1 = (t0 + 2152U);
     t2 = *((char **)t1);
-    t1 = (t0 + 13244U);
-    t3 = (t0 + 13356);
+    t1 = (t0 + 13052U);
+    t3 = (t0 + 13164);
     t6 = (t5 + 0U);
     t7 = (t6 + 0U);
     *((int *)t7) = 0;
@@ -233,8 +233,8 @@ LAB5:    xsi_set_current_line(81, ng0);
 
 LAB8:    t7 = (t0 + 2312U);
     t11 = *((char **)t7);
-    t7 = (t0 + 13260U);
-    t12 = (t0 + 13352);
+    t7 = (t0 + 13068U);
+    t12 = (t0 + 13160);
     t14 = (t16 + 0U);
     t17 = (t14 + 0U);
     *((int *)t17) = 0;
@@ -271,8 +271,8 @@ LAB11:    xsi_set_current_line(89, ng0);
 
 LAB14:    t17 = (t0 + 2472U);
     t20 = *((char **)t17);
-    t17 = (t0 + 13276U);
-    t21 = (t0 + 13364);
+    t17 = (t0 + 13084U);
+    t21 = (t0 + 13172);
     t23 = (t25 + 0U);
     t26 = (t23 + 0U);
     *((int *)t26) = 0;
@@ -291,8 +291,8 @@ LAB14:    t17 = (t0 + 2472U);
 
 LAB17:    t7 = (t0 + 2312U);
     t11 = *((char **)t7);
-    t7 = (t0 + 13260U);
-    t12 = (t0 + 13360);
+    t7 = (t0 + 13068U);
+    t12 = (t0 + 13168);
     t14 = (t16 + 0U);
     t17 = (t14 + 0U);
     *((int *)t17) = 0;

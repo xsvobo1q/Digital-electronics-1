@@ -1,11 +1,11 @@
 set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
 run
--ifn stopwatch.prj
--ofn stopwatch
+-ifn stopwatch_driver.prj
+-ofn stopwatch_driver
 -ofmt NGC
 -p xc7a100t-3-csg324
--top stopwatch
+-top stopwatch_driver
 -opt_mode Speed
 -opt_level 1
 -power NO

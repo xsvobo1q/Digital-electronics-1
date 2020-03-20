@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Marek/Desktop/Digital-electronics-1-Moje/Digital-electronics-1-master/Labs/07-stopwatch/stopwatch/BCD.vhd";
+static const char *ng0 = "C:/Users/Marek/Desktop/DE Moje/Digital-electronics-1-master/Labs/07-stopwatch/07-stopwatch/stopwatch/BCD.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_3620187407;
 
@@ -94,8 +94,8 @@ LAB2:    xsi_set_current_line(57, ng0);
 
 LAB9:    t4 = (t0 + 2152U);
     t10 = *((char **)t4);
-    t4 = (t0 + 6448U);
-    t11 = (t0 + 6486);
+    t4 = (t0 + 6384U);
+    t11 = (t0 + 6422);
     t14 = (t13 + 0U);
     t15 = (t14 + 0U);
     *((int *)t15) = 0;
@@ -178,7 +178,7 @@ LAB14:    t15 = (t0 + 1352U);
 LAB17:    xsi_set_current_line(60, ng0);
     t1 = (t0 + 2152U);
     t11 = *((char **)t1);
-    t1 = (t0 + 6448U);
+    t1 = (t0 + 6384U);
     t12 = ieee_p_3620187407_sub_436279890_3965413181(IEEE_P_3620187407, t13, t11, t1, 1);
     t14 = (t13 + 12U);
     t17 = *((unsigned int *)t14);
